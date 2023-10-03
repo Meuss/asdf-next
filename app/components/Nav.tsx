@@ -7,11 +7,11 @@ export const Nav = () => {
   const pathname = usePathname()
 
   return (
-    <nav className="flex gap-2 justify-center">
-      <Link href="/" className="text-xl">
+    <nav className='flex justify-center gap-2'>
+      <Link href='/' className='text-xl'>
         Home
       </Link>
-      <Link href="/verify" className="text-xl">
+      <Link href='/verify' className='text-xl'>
         Verify
       </Link>
     </nav>
