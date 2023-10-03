@@ -1,6 +1,6 @@
 # asdf-next
 
-```
+```bash
 yarn dev
 # prettier
 yarn format --check
