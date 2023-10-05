@@ -17,8 +17,11 @@
   h1 {
     @apply mt-4 text-3xl font-extrabold tracking-[-0.04em] text-black sm:text-5xl sm:leading-[3.5rem];
   }
+  h2 {
+    @apply text-base font-extrabold tracking-[-0.04em] text-black;
+  }
   a {
-    @apply font-extrabold text-indigo-600 hover:text-indigo-500;
+    @apply font-semibold text-indigo-600 hover:text-indigo-500;
   }
   p {
     @apply mt-4 text-base leading-7 text-slate-600;
@@ -27,6 +30,30 @@
 
 @layer components {
   /* Utility classes (.card, .btn, etc.) */
+  .imageRing {
+    clip-path: url('#ringPath');
+    filter: saturate(5);
+    // animation: loading 1s ease-in-out infinite;
+    // transform-origin: center center;
+  }
+  .imageRing2 {
+    clip-path: url('#inverseRingPath');
+  }
+  #ringPath {
+    animation: loading 2s ease-in-out infinite;
+    transform-origin: 51% center;
+  }
+  @keyframes loading {
+    0% {
+      transform: rotate(0deg);
+    }
+    70% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 }
 
 @layer utilities {

@@ -1,23 +1,26 @@
 /* Components */
 import { Providers } from '@/lib/providers'
 import { Nav } from './components/Nav'
+import { Slider } from './components/Slider'
+import { Ring } from './components/Ring'
 
 /* Instruments */
-import './styles/globals.css'
+import './styles/globals.scss'
 
 export default function RootLayout(props: React.PropsWithChildren) {
   return (
     <Providers>
-      <html lang='en'>
-        <body className='min-h-screen p-10 font-sans antialiased'>
-          <section className='h-100 flex flex-col'>
-            <Nav />
-            <h1 className='my-10 text-center'>asdf-next</h1>
+      <html lang='en' suppressHydrationWarning>
+        <body className='font-sans antialiased'>
+          <section className='flex min-h-screen flex-col overflow-hidden'>
+            <main className='relative'>
+              {props.children}
+              <Slider />
+              <Ring />
+            </main>
 
-            <main>{props.children}</main>
-
-            <footer className='text-center'>
-              <p>Links</p>
+            <footer className='flex items-end justify-between p-10'>
+              <Nav />
               <div className='flex justify-center gap-1'>
                 <a href='https://reactjs.org/' target='_blank' rel='noopener noreferrer'>
                   React

@@ -7,13 +7,13 @@ export const Nav = () => {
   const pathname = usePathname()
 
   return (
-    <nav className='flex justify-center gap-2'>
-      <Link href='/' className='text-xl'>
-        Home
-      </Link>
-      <Link href='/verify' className='text-xl'>
-        Verify
-      </Link>
-    </nav>
+    <div className='flex flex-col items-start'>
+      <h2>asdf-next</h2>
+      <nav className='flex justify-center gap-2 text-xl'>
+        <Link href='/'>Image</Link>
+        <span>–</span>
+        <Link href='/counter'>Counter</Link>
+      </nav>
+    </div>
   )
 }
